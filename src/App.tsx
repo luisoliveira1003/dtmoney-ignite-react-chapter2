@@ -6,7 +6,7 @@ import { NewTransactionModal } from "./components/NewTransactionModal";
 import {
   TransactionsContext,
   TransactionsProvider,
-} from "./TransactionsContext";
+} from "./hooks/useTransactions";
 
 import { GlobalStyle } from "./styles/global";
 

@@ -1,13 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import icomeImg from "../../assets/income.svg";
 import outcomeImg from "../../assets/outcome.svg";
 import totalImg from "../../assets/total.svg";
-import { TransactionsContext } from "../../TransactionsContext";
-
+import { useTransactions } from "../../hooks/useTransactions";
 import { Container } from "../Summary/styles";
 
 export function Summary() {
-  const { transactions } = useContext(TransactionsContext);
+  const { transactions } = useTransactions();
 
   // const totalDeposits = transactions.reduce((acc, transaction) => {
   //   if (transaction.type === "deposit") {
@@ -56,7 +55,7 @@ export function Summary() {
           <img src={outcomeImg} alt="Saídas" />
         </header>
         <strong>
-          - 
+          -
           {new Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL",
