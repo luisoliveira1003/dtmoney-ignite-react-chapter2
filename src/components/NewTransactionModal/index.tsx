@@ -6,8 +6,6 @@ import outcomeImg from "../../assets/outcome.svg";
 import { useTransactions } from "../../hooks/useTransactions";
 import { Container, RadioBox, TransactionTypeContainer } from "./styles";
 
-
-
 interface NewTransactionModalProps {
   isOpen: boolean;
   onRequestClose: () => void;
